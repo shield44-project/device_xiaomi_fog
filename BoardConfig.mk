@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/xiaomi/spes
+DEVICE_PATH := device/xiaomi/fog
 COMMON_PATH := device/qcom/common
 
 # A/B
@@ -94,12 +94,12 @@ DEVICE_MATRIX_FILE += $(COMMON_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/xiaomi_manifest.xml
 
-ODM_MANIFEST_SKUS += k7tn
-ODM_MANIFEST_K7TN_FILES := $(DEVICE_PATH)/configs/hidl/manifest_k7tn.xml
+ODM_MANIFEST_SKUS += c3qn
+ODM_MANIFEST_C3QN_FILES := $(DEVICE_PATH)/configs/hidl/manifest_c3qn.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_spes
-TARGET_RECOVERY_DEVICE_MODULES := libinit_spes
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_fog
+TARGET_RECOVERY_DEVICE_MODULES := libinit_fog
 
 # Kernel
 BOARD_KERNEL_BASE        := 0x00000000
@@ -122,6 +122,7 @@ BOARD_KERNEL_CMDLINE += \
     androidboot.init_fatal_reboot_target=recovery \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
+    androidboot.selinux=permissive \
     androidboot.usbcontroller=4e00000.dwc3 \
     console=ttyMSM0,115200n8 \
     earlycon=msm_geni_serial,0x4a90000 \
@@ -136,7 +137,7 @@ BOARD_KERNEL_CMDLINE += \
 TARGET_DISABLED_UBWC := true
 
 # OTA assert
-TARGET_OTA_ASSERT_DEVICE := spes,spesn
+TARGET_OTA_ASSERT_DEVICE := fog,wind,rain
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
@@ -184,7 +185,7 @@ TARGET_SCREEN_DENSITY := 440
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
--include device/xiaomi/spes/sepolicy/spes-sepolicy.mk
+-include device/xiaomi/fog/sepolicy/fog-sepolicy.mk
 
 # Treble flag
 BOARD_VNDK_VERSION := current
@@ -193,4 +194,4 @@ BOARD_VNDK_VERSION := current
 CONFIG_ACS := true
 
 # Inherit from the proprietary version
-include vendor/xiaomi/spes/BoardConfigVendor.mk
+include vendor/xiaomi/fog/BoardConfigVendor.mk

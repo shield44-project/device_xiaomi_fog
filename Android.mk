@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),spes)
+ifeq ($(TARGET_DEVICE),fog)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
@@ -112,9 +112,9 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(WIFI_FIRMWARE_SYMLINKS)
 	
 # Kernel headers
-$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr: $(wildcard device/xiaomi/spes-kernel/kernel-headers/*)
+$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr: $(wildcard device/xiaomi/fog-kernel/kernel-headers/*)
 	rm -rf $@
 	mkdir -p $@/include
-	cp -a device/xiaomi/spes-kernel/kernel-headers/. $@/include
+	cp -a device/xiaomi/fog-kernel/kernel-headers/. $@/include
 	
 endif

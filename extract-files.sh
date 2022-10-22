@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=spes
+DEVICE=fog
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

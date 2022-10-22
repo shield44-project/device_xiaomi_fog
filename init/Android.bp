@@ -13,10 +13,10 @@
 // limitations under the License.
 
 cc_library_static {
-    name: "libinit_spes",
+    name: "libinit_fog",
     recovery_available: true,
     shared_libs: ["libbase"],
-    srcs: ["init_spes.cpp"],
+    srcs: ["init_fog.cpp"],
     include_dirs: [
         "system/core/init",
         "system/libbase/include"
@@ -24,15 +24,15 @@ cc_library_static {
 }
 
 prebuilt_etc {
-    name: "init.spes.rc",
-    src: "init.spes.rc",
+    name: "init.fog.rc",
+    src: "init.fog.rc",
     sub_dir: "init",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "init.spes.perf.rc",
-    src: "init.spes.perf.rc",
+    name: "init.fog.perf.rc",
+    src: "init.fog.perf.rc",
     sub_dir: "init",
     vendor: true,
 }
@@ -59,9 +59,9 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ueventd.spes.rc",
+    name: "ueventd.fog.rc",
     filename: "ueventd.rc",
-    src: "ueventd.spes.rc",
+    src: "ueventd.fog.rc",
     device_specific: true,
 }
 
