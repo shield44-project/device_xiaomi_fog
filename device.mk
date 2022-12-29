@@ -62,7 +62,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service
 
 PRODUCT_ODM_PROPERTIES += \
-    aaudio.mmap_policy=2 \
     ro.vendor.audio.sdk.fluencetype=none \
     vendor.audio.hw.aac.encoder=false
 
