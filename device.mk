@@ -51,6 +51,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_VENDOR_KERNEL_HEADERS += $(LOCAL_PATH)-kernel/kernel-headers
 
+# Media
+PRODUCT_ODM_PROPERTIES += \
+    media.settings.xml=/vendor/etc/media_profiles_khaje.xml
+
 # NFC
 TARGET_COMMON_QTI_COMPONENTS += \
     nfc
