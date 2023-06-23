@@ -19,6 +19,10 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 # API Level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# AB
+TARGET_IS_VAB := true
+PRODUCT_VIRTUAL_AB_OTA := true
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
