@@ -1,5 +1,4 @@
 # All FOG MIUI blobs below are extracted from FOG MIUI_FOGGlobal_V13.0.5.0.SGEMIXM
-# All SPES MIUI blobs below are extracted from miui_SPESNGlobal_V13.0.7.0.SGKMIXM
 
 # ACDB - from FOG MIUI
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb|0cc92d7ce081e30ccaa203b3591f592d7ca36a6d
@@ -115,10 +114,6 @@ vendor/lib/libsndmonitor.so|c1868614e828295b139c8afface6bd205f39c6e9
 vendor/lib/libspkrprot.so|1640a2313d042f26ea4a03af7a5ad5f90cddc813
 vendor/lib/libssrec.so|8ee9f07a09881f3f5f7edb70946802649ea00f03
 vendor/lib/libsurround_3mic_proc.so|e8e086123e0c1dc17f008f97edb3611cd4c702e1
-
-# Batterysecret - from SPES MIUI
-vendor/bin/batterysecret|58c75096366cf981b4a1f1cea1f41a392ac0d07b
-vendor/etc/init/init.batterysecret.rc|93b03fe5139f32fa17a006198a55cdc19570b252
 
 # Camera - from FOG MIUI
 vendor/bin/f2player|a9d6c7f6813899c6ba624cfeed65d964a0ac8c1f
